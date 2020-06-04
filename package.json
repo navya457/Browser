@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "test": ".\\node_modules\\.bin\\cypress run --browser chrome"
+    "test": ".\\node_modules\\.bin\\cypress run --browser chrome"
   },
   "author": "Navyashree",
   "license": "ISC",
   "devDependencies": {
     "allure-commandline": "^2.13.0",
-    "cypress": "^4.0.1"
+    "cypress": "^4.1.0"
   }
 }

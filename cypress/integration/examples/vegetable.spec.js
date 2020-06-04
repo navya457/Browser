@@ -1,11 +1,17 @@
+
+import login from '../pageObjects/login'
 describe('My First Test Suite', function() 
 {
  
 it('My FirstTest case',function() {
+
+    const l  =new login();
+l.visit();
+
+
  
- 
-cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/")
-cy.get('.search-keyword').type('ca')
+//cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/")
+cy.get('.search-keyword')
 cy.wait(2000)
 //selenium get hit url in browser, cypress get acts like findElement of selenium
 cy.get('.product').should('have.length',5)
@@ -20,7 +26,6 @@ cy.get('@productLocator').find('.product').eq(2).contains('ADD TO CART').click()
 })
  
 cy.get('@productLocator').find('.product').each(($el, index, $list) => {
- 
 const textVeg=$el.find('h4.product-name').text()
 if(textVeg.includes('Cashews'))
 {
